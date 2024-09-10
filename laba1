@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Шильников Сергей Алексеевич</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Список задач</h1>
+
+            <div class="new-task">
+                <div class="new-task-title"><strong>Новая Задача</strong></div>
+                <div class="new-task-placeholder"><input type="text" placeholder="Название задачи..."></div>
+                <div class="new-task-button"><button>Добавить</button></div>
+            </div>
+
+        <div class="task-columns">
+            <div class="task-column">
+                <h2 class="backlog">Бэклог</h2>
+                <ul>
+                    <li>Провести 2 часа на обучении новому навыку</li>
+                    <li>Ответить на важные e-mails</li>
+                    <li>Приготовить здоровый ужин</li>
+                </ul>
+            </div>
+
+            <div class="task-column">
+                <h2 class="in-progress">Выполняется</h2>
+                <ul>
+                    <li>Завершить рабочий проект</li>
+                    <li>Начать читать новую книгу</li>
+                </ul>
+            </div>
+
+            <div class="task-column">
+                <h2 class="done">Готово</h2>
+                <ul>
+                    <li>Пойти на утреннюю пробежку</li>
+                    <li>Записаться на медицинский осмотр</li>
+                </ul>
+            </div>
+
+            <div class="task-column">
+                <h2 class="trash">Корзина</h2>
+                <ul>
+                    <li>Забронировать поездку на выходные</li>
+                    <li>Посетить мастер-класс</li>
+                </ul>
+            </div>
+        </div>
+
+        <button class="clear">Очистить</button>
+    </div>
+</body>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #c4a189;
+        margin: 0;
+        padding: 0;
+    }
+
+    .container {
+        padding: 20px;
+    }
+
+    h1 {
+        text-align: center;
+        color: white;
+        background-color: #da7151;
+        padding: 10px;
+        margin: 0;
+        margin-bottom: 30px;
+    }
+
+    .new-task {
+        text-align: left;
+        margin-left: 40px;
+        margin-bottom: 30px;
+    }
+
+    .new-task input {
+        padding: 5px;
+        margin-right: 5px;
+    }
+
+    .task-columns {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .task-column {
+        width: 20%;
+    }
+
+    h2 {
+        text-align: center;
+        padding: 5px;
+        border-radius: 5px;
+    }
+
+    .backlog {
+        background-color: #d3d3d3;
+    }
+
+    .in-progress {
+        background-color: #79d5d0;
+    }
+
+    .done {
+        background-color: #98e08c;
+    }
+
+    .trash {
+        background-color: #ff6978;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    li {
+        background-color: white;
+        border-radius: 5px;
+        padding: 10px;
+        margin-bottom: 10px;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    }
+
+    button {
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        color: white;
+        cursor: pointer;
+    }
+
+    .new-task button {
+        background-color: #ba4a1b;
+    }
+
+    .clear {
+        display: block;
+        margin: 20px auto 0;
+        background-color: #ff0000;
+    }
+    .new-task-title {
+        margin-bottom: 10px;
+    }
+
+    .new-task-placeholder {
+        margin-bottom: 10px;
+    }
+
+    .new-task-button {
+        margin-bottom: 10px;
+    }
+</style>
+
+</html>
