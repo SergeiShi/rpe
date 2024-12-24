@@ -1,166 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Шильников Сергей Алексеевич</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles/normolize.css">
+    <link rel="stylesheet" href="styles/name_task.css">
+    <link rel="stylesheet" href="styles/items_task.css">
+    <link rel="stylesheet" href="styles/add_task.css">
+    <link rel="stylesheet" href="styles/button_clear.css">
+    <title>TodoList</title>
 </head>
-
 <body>
-    <div class="container">
+    <header>
         <h1>Список задач</h1>
-
-            <div class="new-task">
-                <div class="new-task-title"><strong>Новая Задача</strong></div>
-                <div class="new-task-placeholder"><input type="text" placeholder="Название задачи..."></div>
-                <div class="new-task-button"><button>Добавить</button></div>
-            </div>
-
-        <div class="task-columns">
-            <div class="task-column">
-                <h2 class="backlog">Бэклог</h2>
-                <ul>
-                    <li>Провести 2 часа на обучении новому навыку</li>
-                    <li>Ответить на важные e-mails</li>
-                    <li>Приготовить здоровый ужин</li>
-                </ul>
-            </div>
-
-            <div class="task-column">
-                <h2 class="in-progress">Выполняется</h2>
-                <ul>
-                    <li>Завершить рабочий проект</li>
-                    <li>Начать читать новую книгу</li>
-                </ul>
-            </div>
-
-            <div class="task-column">
-                <h2 class="done">Готово</h2>
-                <ul>
-                    <li>Пойти на утреннюю пробежку</li>
-                    <li>Записаться на медицинский осмотр</li>
-                </ul>
-            </div>
-
-            <div class="task-column">
-                <h2 class="trash">Корзина</h2>
-                <ul>
-                    <li>Забронировать поездку на выходные</li>
-                    <li>Посетить мастер-класс</li>
-                </ul>
-            </div>
-        </div>
-
-        <button class="clear">Очистить</button>
+    </header>
+    <div class="user_add_task">
+        <h2>Новая задача</h2>
+        <input type="search" placeholder="Название задачи..." class="user_add_task_search">
+        <button class="user_add_task_button"> + Добавить</button>
     </div>
+    <section class="task">
+        <label class="task_status backlog">Бэклог</label>
+        <ul class="task_list_backlog">
+            <li class="task_list_items">Выучить JS</li>
+            <li class="task_list_items">Выучить React</li>
+            <li class="task_list_items">Сделать домашку</li>
+        </ul>
+
+        <label class="task_status process">В процессе</label>
+        <ul class="task_list_proсess">
+            <li class="task_list_items">Выпить смузи</li>
+            <li class="task_list_items">Попить воды</li>
+        </ul>
+
+        <label class="task_status ready">Готово</label>
+        <ul class="task_list_ready">
+            <li class="task_list_items">Позвонить маме</li>
+            <li class="task_list_items">Погладить кота</li>
+        </ul>
+
+        <label class="task_status backet">Корзина</label>
+        <ul class="task_list_backet">
+            <li class="task_list_items">Сходить погулять</li>
+            <li class="task_list_items">Прочитать Войну и Мир</li>
+        </ul>
+        <button class="task_button_clear">X Очистить</button>
+    </section>
 </body>
-
-<style>
-    body {
-        font-family: Arial, sans-serif;
-        background-color: #c4a189;
-        margin: 0;
-        padding: 0;
-    }
-
-    .container {
-        padding: 20px;
-    }
-
-    h1 {
-        text-align: center;
-        color: white;
-        background-color: #da7151;
-        padding: 10px;
-        margin: 0;
-        margin-bottom: 30px;
-    }
-
-    .new-task {
-        text-align: left;
-        margin-left: 40px;
-        margin-bottom: 30px;
-    }
-
-    .new-task input {
-        padding: 5px;
-        margin-right: 5px;
-    }
-
-    .task-columns {
-        display: flex;
-        justify-content: space-around;
-    }
-
-    .task-column {
-        width: 20%;
-    }
-
-    h2 {
-        text-align: center;
-        padding: 5px;
-        border-radius: 5px;
-    }
-
-    .backlog {
-        background-color: #d3d3d3;
-    }
-
-    .in-progress {
-        background-color: #79d5d0;
-    }
-
-    .done {
-        background-color: #98e08c;
-    }
-
-    .trash {
-        background-color: #ff6978;
-    }
-
-    ul {
-        list-style: none;
-        padding: 0;
-    }
-
-    li {
-        background-color: white;
-        border-radius: 5px;
-        padding: 10px;
-        margin-bottom: 10px;
-        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-    }
-
-    button {
-        padding: 10px 20px;
-        border: none;
-        border-radius: 5px;
-        color: white;
-        cursor: pointer;
-    }
-
-    .new-task button {
-        background-color: #ba4a1b;
-    }
-
-    .clear {
-        display: block;
-        margin: 20px auto 0;
-        background-color: #ff0000;
-    }
-    .new-task-title {
-        margin-bottom: 10px;
-    }
-
-    .new-task-placeholder {
-        margin-bottom: 10px;
-    }
-
-    .new-task-button {
-        margin-bottom: 10px;
-    }
-</style>
-
 </html>
